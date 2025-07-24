@@ -1,0 +1,7 @@
+<script>
+    $(document).ready(function () {
+        setTimeout(function () {
+            $('#flash-message').fadeOut('slow');
+        }, 4000); // 4000ms = 4 seconds
+    });
+</script>
