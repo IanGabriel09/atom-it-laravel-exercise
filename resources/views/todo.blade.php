@@ -140,6 +140,14 @@
             setTimeout(function () {
                 $('#flashMessage').fadeOut('slow');
             }, 4000); // 4000ms = 4 seconds
+
+            // Intercept all form submissions
+            $('form').on('submit', function (e) {
+                const confirmed = confirm('Are you sure you want to proceed?');
+                if (!confirmed) {
+                    e.preventDefault(); // Cancel form submission
+                }
+            });
         });
     </script>
 @endsection
